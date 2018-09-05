@@ -34,4 +34,22 @@ Cinema.prototype.isYear = function (year) {
 
 };
 
+
+Cinema.prototype.overLength = function (time) {
+  const result = this.films.filter((film) => film.length > time)
+
+  // console.log("Result:", result);
+
+  if( result.length === 0 ){
+    return false;
+  } else {
+    return true;
+  }
+
+};
+
+
+
+//use length to check length is the same. makes it easier to test
+
 module.exports = Cinema;
