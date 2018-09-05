@@ -13,8 +13,13 @@ Cinema.prototype.findFilm = function (string) {
 };
 
 // needs a condition that is true or false which is what === string is
-// string is the parameter passed in 
+// string is the parameter passed in
 
+
+Cinema.prototype.findByGenre = function (genre) {
+  return this.films.filter((film) => film.genre === genre);
+
+};
 
 
 module.exports = Cinema;
